@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<div class="container mt-5">
+    <div class="card mb-3">
+        <div class="card-body">
+            <h1 class="card-title">{{ user.username }}</h1>
+            <h6 class="card-subtitle mb-2 text-muted">{{ user.email }}</h6>
+            <p class="card-text">{{ user.profile.bio|default:"No bio available" }}</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-header">
+            User Details
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><strong>Username:</strong> {{ user.username }}</li>
+            <li class="list-group-item"><strong>Email:</strong> {{ user.email }}</li>
+            <li class="list-group-item"><strong>Member since:</strong> {{ user.date_joined|date:"F j, Y" }}</li>
+            <li class="list-group-item"><strong>Last login:</strong> {{ user.last_login|date:"F j, Y, g:i a" }}</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock content %}

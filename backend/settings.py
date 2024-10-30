@@ -129,4 +129,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'blog-home'
-# LOGOUT_REDIRECT_URL = 'logout.html' 
+LOGIN_URL='login'
