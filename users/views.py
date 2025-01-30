@@ -2,6 +2,19 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.contrib .auth.decorators import login_required
 from .forms import UserRegisterForm , UserUpdateForm , ProfileUpdateForm
+from django.core.mail import send_mail
+from django.http import HttpResponse
+
+#temporary
+def send_test_email(request):
+    send_mail(
+        'Test Email',
+        'This is a test email from Django.',
+        'arkonafoob@gmail.com',
+        ['202351166@iiitvadodara.ac.in'],
+        fail_silently=False,
+    )
+    return HttpResponse("Test email sent successfully!")
 
 def register(request):
     if request.method == 'POST':
