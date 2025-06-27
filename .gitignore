@@ -1,0 +1,60 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Django database & secrets
+*.sqlite3
+.env
+.env.*
+
+# Django static/media
+/static/
+media/
+
+# Django migrations (optional)
+**/migrations/*.py
+**/migrations/*.pyc
+!*/migrations/__init__.py  # Keep init file so Django recognizes the module
+
+# Logs
+*.log
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Coverage/testing
+htmlcov/
+coverage.xml
+*.cover
+.cache
+.tox/
+
+# MyPy and linting
+.mypy_cache/
+.pytest_cache/
+
+# Docker
+*.pid
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+db.sqlite3
